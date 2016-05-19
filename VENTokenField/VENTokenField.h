@@ -78,6 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic, nullable) NSArray *delimiters;
 @property (copy, nonatomic, nullable) NSString *placeholderText;
+@property (copy, nonatomic, nullable) NSAttributedString *placeholderAttributedText;
 @property (copy, nonatomic, nullable) NSString *inputTextFieldAccessibilityLabel;
 
 - (void)setColorScheme:(UIColor *)color;

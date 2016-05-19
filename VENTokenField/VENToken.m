@@ -46,6 +46,7 @@
     self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapToken:)];
     self.colorScheme = [UIColor blueColor];
     self.titleLabel.textColor = self.colorScheme;
+    self.titleLabel.font = [UIFont systemFontOfSize:14];
     [self addGestureRecognizer:self.tapGestureRecognizer];
 }
 
@@ -62,7 +63,7 @@
 {
     _highlighted = highlighted;
     UIColor *textColor = highlighted ? [UIColor whiteColor] : self.colorScheme;
-    UIColor *backgroundColor = highlighted ? self.colorScheme : [UIColor clearColor];
+    UIColor *backgroundColor = highlighted ? [UIColor colorWithRed:0.0/255.0 green:204.0/255.0 blue:120.0/255.0 alpha:1] : [UIColor clearColor];
     self.titleLabel.textColor = textColor;
     self.backgroundView.backgroundColor = backgroundColor;
 }
