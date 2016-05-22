@@ -23,6 +23,14 @@
 		B692A48F1954D9CA00344E36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6173E101952760200E293BB /* UIKit.framework */; };
 		B692A4971954D9CA00344E36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B692A4951954D9CA00344E36 /* InfoPlist.strings */; };
 		B692A4991954D9CA00344E36 /* VENTokenFieldSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B692A4981954D9CA00344E36 /* VENTokenFieldSampleTests.m */; };
+		CE9988101CF267000041FDDE /* VENTokenField.h in Headers */ = {isa = PBXBuildFile; fileRef = CE99880F1CF267000041FDDE /* VENTokenField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE9988141CF267000041FDDE /* VENTokenField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99880D1CF267000041FDDE /* VENTokenField.framework */; };
+		CE9988151CF267000041FDDE /* VENTokenField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE99880D1CF267000041FDDE /* VENTokenField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE99881F1CF267310041FDDE /* VENBackspaceTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = CE99881A1CF267310041FDDE /* VENBackspaceTextField.h */; };
+		CE9988201CF267310041FDDE /* VENBackspaceTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE99881B1CF267310041FDDE /* VENBackspaceTextField.m */; };
+		CE9988211CF267310041FDDE /* VENToken.h in Headers */ = {isa = PBXBuildFile; fileRef = CE99881C1CF267310041FDDE /* VENToken.h */; };
+		CE9988221CF267310041FDDE /* VENToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CE99881D1CF267310041FDDE /* VENToken.m */; };
+		CE9988231CF267310041FDDE /* VENToken.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE99881E1CF267310041FDDE /* VENToken.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +41,28 @@
 			remoteGlobalIDString = B692A46E1954D9CA00344E36;
 			remoteInfo = VENTokenFieldSample;
 		};
+		CE9988121CF267000041FDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6173DF41952760200E293BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE99880C1CF267000041FDDE;
+			remoteInfo = VENTokenField;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE9988191CF267010041FDDE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE9988151CF267000041FDDE /* VENTokenField.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		13471D074FC78D9374DC065D /* Pods-VENTokenFieldSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VENTokenFieldSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VENTokenFieldSample/Pods-VENTokenFieldSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +90,14 @@
 		B692A4981954D9CA00344E36 /* VENTokenFieldSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VENTokenFieldSampleTests.m; sourceTree = "<group>"; };
 		C4D07417DD394445AE7C0DB7 /* libPods-VENTokenFieldSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VENTokenFieldSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC25A6AFCDA20C99D6704030 /* Pods-VENTokenFieldSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VENTokenFieldSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VENTokenFieldSampleTests/Pods-VENTokenFieldSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE99880D1CF267000041FDDE /* VENTokenField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VENTokenField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE99880F1CF267000041FDDE /* VENTokenField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VENTokenField.h; sourceTree = "<group>"; };
+		CE9988111CF267000041FDDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE99881A1CF267310041FDDE /* VENBackspaceTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VENBackspaceTextField.h; sourceTree = "<group>"; };
+		CE99881B1CF267310041FDDE /* VENBackspaceTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VENBackspaceTextField.m; sourceTree = "<group>"; };
+		CE99881C1CF267310041FDDE /* VENToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VENToken.h; sourceTree = "<group>"; };
+		CE99881D1CF267310041FDDE /* VENToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VENToken.m; sourceTree = "<group>"; };
+		CE99881E1CF267310041FDDE /* VENToken.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VENToken.xib; sourceTree = "<group>"; };
 		D4635CD45D6A16F4BFC34335 /* Pods-VENTokenFieldSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VENTokenFieldSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VENTokenFieldSampleTests/Pods-VENTokenFieldSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +109,7 @@
 				B692A4721954D9CA00344E36 /* CoreGraphics.framework in Frameworks */,
 				B692A4731954D9CA00344E36 /* UIKit.framework in Frameworks */,
 				B692A4701954D9CA00344E36 /* Foundation.framework in Frameworks */,
+				CE9988141CF267000041FDDE /* VENTokenField.framework in Frameworks */,
 				0EDC359051B446EA93FED072 /* libPods-VENTokenFieldSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +125,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE9988091CF267000041FDDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +140,7 @@
 			children = (
 				B692A4741954D9CA00344E36 /* VENTokenFieldSample */,
 				B692A4921954D9CA00344E36 /* VENTokenFieldSampleTests */,
+				CE99880E1CF267000041FDDE /* VENTokenField */,
 				B6173DFE1952760200E293BB /* Frameworks */,
 				B6173DFD1952760200E293BB /* Products */,
 				F148C8EC7B80CD3153108B54 /* Pods */,
@@ -106,6 +152,7 @@
 			children = (
 				B692A46F1954D9CA00344E36 /* VENTokenFieldSample.app */,
 				B692A48C1954D9CA00344E36 /* VENTokenFieldSampleTests.xctest */,
+				CE99880D1CF267000041FDDE /* VENTokenField.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +214,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CE99880E1CF267000041FDDE /* VENTokenField */ = {
+			isa = PBXGroup;
+			children = (
+				CE99881A1CF267310041FDDE /* VENBackspaceTextField.h */,
+				CE99881B1CF267310041FDDE /* VENBackspaceTextField.m */,
+				CE99881C1CF267310041FDDE /* VENToken.h */,
+				CE99881D1CF267310041FDDE /* VENToken.m */,
+				CE99881E1CF267310041FDDE /* VENToken.xib */,
+				CE99880F1CF267000041FDDE /* VENTokenField.h */,
+				CE9988111CF267000041FDDE /* Info.plist */,
+			);
+			path = VENTokenField;
+			sourceTree = "<group>";
+		};
 		F148C8EC7B80CD3153108B54 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +241,19 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		CE99880A1CF267000041FDDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE99881F1CF267310041FDDE /* VENBackspaceTextField.h in Headers */,
+				CE9988211CF267310041FDDE /* VENToken.h in Headers */,
+				CE9988101CF267000041FDDE /* VENTokenField.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		B692A46E1954D9CA00344E36 /* VENTokenFieldSample */ = {
 			isa = PBXNativeTarget;
@@ -190,10 +264,12 @@
 				B692A46C1954D9CA00344E36 /* Frameworks */,
 				B692A46D1954D9CA00344E36 /* Resources */,
 				83A0589C45D944989E3B327C /* Copy Pods Resources */,
+				CE9988191CF267010041FDDE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE9988131CF267000041FDDE /* PBXTargetDependency */,
 			);
 			name = VENTokenFieldSample;
 			productName = VENTokenFieldSample;
@@ -220,6 +296,24 @@
 			productReference = B692A48C1954D9CA00344E36 /* VENTokenFieldSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CE99880C1CF267000041FDDE /* VENTokenField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9988181CF267010041FDDE /* Build configuration list for PBXNativeTarget "VENTokenField" */;
+			buildPhases = (
+				CE9988081CF267000041FDDE /* Sources */,
+				CE9988091CF267000041FDDE /* Frameworks */,
+				CE99880A1CF267000041FDDE /* Headers */,
+				CE99880B1CF267000041FDDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VENTokenField;
+			productName = VENTokenField;
+			productReference = CE99880D1CF267000041FDDE /* VENTokenField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,6 +325,9 @@
 				TargetAttributes = {
 					B692A48B1954D9CA00344E36 = {
 						TestTargetID = B692A46E1954D9CA00344E36;
+					};
+					CE99880C1CF267000041FDDE = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -249,6 +346,7 @@
 			targets = (
 				B692A46E1954D9CA00344E36 /* VENTokenFieldSample */,
 				B692A48B1954D9CA00344E36 /* VENTokenFieldSampleTests */,
+				CE99880C1CF267000041FDDE /* VENTokenField */,
 			);
 		};
 /* End PBXProject section */
@@ -269,6 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B692A4971954D9CA00344E36 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE99880B1CF267000041FDDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9988231CF267310041FDDE /* VENToken.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +462,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE9988081CF267000041FDDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9988201CF267310041FDDE /* VENBackspaceTextField.m in Sources */,
+				CE9988221CF267310041FDDE /* VENToken.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -363,6 +478,11 @@
 			isa = PBXTargetDependency;
 			target = B692A46E1954D9CA00344E36 /* VENTokenFieldSample */;
 			targetProxy = B692A4901954D9CA00344E36 /* PBXContainerItemProxy */;
+		};
+		CE9988131CF267000041FDDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE99880C1CF267000041FDDE /* VENTokenField */;
+			targetProxy = CE9988121CF267000041FDDE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -485,6 +605,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "VENTokenFieldSample/VENTokenFieldSample-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.venmo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -505,6 +626,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VENTokenFieldSample/VENTokenFieldSample-Prefix.pch";
 				INFOPLIST_FILE = "VENTokenFieldSample/VENTokenFieldSample-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.venmo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -555,6 +677,63 @@
 			};
 			name = Release;
 		};
+		CE9988161CF267010041FDDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = VENTokenField/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.venmo.VENTokenField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE9988171CF267010041FDDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = VENTokenField/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.venmo.VENTokenField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -584,6 +763,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CE9988181CF267010041FDDE /* Build configuration list for PBXNativeTarget "VENTokenField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9988161CF267010041FDDE /* Debug */,
+				CE9988171CF267010041FDDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
