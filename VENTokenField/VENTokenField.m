@@ -71,7 +71,7 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 
 - (BOOL)becomeFirstResponder
 {
-    [self layoutTokensAndInputWithFrameAdjustment:YES];
+    [self layoutTokensAndInputWithFrameAdjustment:YES clearInput:YES];
     [self inputTextFieldBecomeFirstResponder];
     return YES;
 }
@@ -115,7 +115,7 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 
 - (void)reloadData
 {
-    [self layoutTokensAndInputWithFrameAdjustment:YES];
+    [self layoutTokensAndInputWithFrameAdjustment:YES clearInput:YES];
 }
 
 - (void)setPlaceholderText:(NSString *)placeholderText
@@ -177,7 +177,7 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     if ([self isCollapsed]) {
         [self layoutCollapsedLabel];
     } else {
-        [self layoutTokensAndInputWithFrameAdjustment:YES];
+        [self layoutTokensAndInputWithFrameAdjustment:YES clearInput:NO];
     }
 }
 
@@ -196,7 +196,7 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     [self addGestureRecognizer:self.tapGestureRecognizer];
 }
 
-- (void)layoutTokensAndInputWithFrameAdjustment:(BOOL)shouldAdjustFrame
+- (void)layoutTokensAndInputWithFrameAdjustment:(BOOL)shouldAdjustFrame clearInput:(BOOL)clearInput
 {
     [self.collapsedLabel removeFromSuperview];
     BOOL inputFieldShouldBecomeFirstResponder = self.inputTextField.isFirstResponder;
@@ -211,7 +211,7 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 
     [self layoutToLabelInView:self.scrollView origin:CGPointZero currentX:&currentX];
     [self layoutTokensWithCurrentX:&currentX currentY:&currentY];
-    [self layoutInputTextFieldWithCurrentX:&currentX currentY:&currentY clearInput:shouldAdjustFrame];
+    [self layoutInputTextFieldWithCurrentX:&currentX currentY:&currentY clearInput:clearInput];
 
     if (shouldAdjustFrame) {
         [self adjustHeightForCurrentY:currentY];
@@ -257,8 +257,11 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     }
 
     VENBackspaceTextField *inputTextField = self.inputTextField;
-    if (clearInput) {
+    if (clearInput && inputTextField.text.length > 0) {
         inputTextField.text = @"";
+        if ([self.delegate respondsToSelector:@selector(tokenField:didChangeText:)]) {
+            [self.delegate tokenField:self didChangeText:inputTextField.text];
+        }
     }
     inputTextField.frame = CGRectMake(*currentX, *currentY + 1, inputTextFieldWidth, [self heightForToken] - 1);
     [self.scrollView addSubview:inputTextField];
