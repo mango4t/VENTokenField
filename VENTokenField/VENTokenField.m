@@ -93,11 +93,10 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     self.tokenPadding = VENTokenFieldDefaultTokenPadding;
     self.minInputWidth = VENTokenFieldDefaultMinInputWidth;
     self.colorScheme = [UIColor blueColor];
-    self.toLabelTextColor = [UIColor colorWithRed:112/255.0f green:124/255.0f blue:124/255.0f alpha:1.0f];
     self.inputTextFieldTextColor = [UIColor colorWithRed:38/255.0f green:39/255.0f blue:41/255.0f alpha:1.0f];
     
     // Accessing bare value to avoid kicking off a premature layout run.
-    _toLabelText = NSLocalizedString(@"To:", nil);
+    _toLabelText = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"To:", nil) attributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:112/255.0f green:124/255.0f blue:124/255.0f alpha:1.0f]}];
 
     self.originalHeight = CGRectGetHeight(self.frame);
 
@@ -135,13 +134,7 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     self.inputTextField.textColor = _inputTextFieldTextColor;
 }
 
-- (void)setToLabelTextColor:(UIColor *)toLabelTextColor
-{
-    _toLabelTextColor = toLabelTextColor;
-    self.toLabel.textColor = _toLabelTextColor;
-}
-
-- (void)setToLabelText:(NSString *)toLabelText
+- (void)setToLabelText:(NSAttributedString *)toLabelText
 {
     _toLabelText = toLabelText;
     [self reloadData];
@@ -362,14 +355,13 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 {
     if (!_toLabel) {
         _toLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _toLabel.textColor = self.toLabelTextColor;
         _toLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:15.5];
         _toLabel.x = 0;
         [_toLabel sizeToFit];
         [_toLabel setHeight:[self heightForToken]];
     }
-    if (![_toLabel.text isEqualToString:_toLabelText]) {
-        _toLabel.text = _toLabelText;
+    if (![_toLabel.attributedText isEqualToAttributedString:_toLabelText]) {
+        _toLabel.attributedText = _toLabelText;
     }
     return _toLabel;
 }
