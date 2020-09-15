@@ -167,11 +167,13 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 {
     [super layoutSubviews];
     self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame) - self.horizontalInset * 2, CGRectGetHeight(self.frame) - self.verticalInset * 2);
-    if ([self isCollapsed]) {
-        [self layoutCollapsedLabel];
-    } else {
-        [self layoutTokensAndInputWithFrameAdjustment:YES clearInput:NO];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self isCollapsed]) {
+            [self layoutCollapsedLabel];
+        } else {
+            [self layoutTokensAndInputWithFrameAdjustment:YES clearInput:NO];
+        }
+    });
 }
 
 - (void)layoutCollapsedLabel
