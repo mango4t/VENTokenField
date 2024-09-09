@@ -25,6 +25,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class VENTokenField;
+NS_SWIFT_UI_ACTOR
 @protocol VENTokenFieldDelegate <NSObject>
 @optional
 - (void)tokenField:(VENTokenField *)tokenField didEnterText:(NSString *)text;
@@ -34,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)tokenField:(VENTokenField *)tokenField didChangeContentHeight:(CGFloat)height;
 @end
 
+NS_SWIFT_UI_ACTOR
 @protocol VENTokenFieldDataSource <NSObject>
 @optional
 - (NSString *)tokenField:(VENTokenField *)tokenField titleForTokenAtIndex:(NSUInteger)index;
@@ -42,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIColor *)tokenField:(VENTokenField *)tokenField colorSchemeForTokenAtIndex:(NSUInteger)index;
 @end
 
-
+NS_SWIFT_UI_ACTOR
 @interface VENTokenField : UIView
 
 @property (weak, nonatomic) id<VENTokenFieldDelegate> delegate;
